@@ -1,10 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {UtenteService} from '../../../services/utente.service';
-import {first} from 'rxjs/operators';
 import {CookieService} from 'ngx-cookie-service';
 import {Router} from '@angular/router';
-import {Utente} from '../../../model/Utente';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +18,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(this.cookieService.get('idUtente')){
+      this.router.navigate(['forum']);
+    }
+
     this.loginForm = this.formBuilder.group({
       id: [''],
       email: ['', Validators.required],
@@ -36,6 +38,7 @@ export class LoginComponent implements OnInit {
         this.data = data;
         this.cookieService.set('idUtente', this.data.id);
         this.cookieService.set('nomeUtente', this.data.nome + ' ' + this.data.cognome);
+        this.router.navigate(['forum']);
       }
     );
   }
