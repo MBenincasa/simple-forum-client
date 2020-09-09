@@ -17,6 +17,6 @@ export class UtenteService {
   }
 
   registration(utente: Utente){
-    return this.http.post<Utente>(`${environment.url}/utente/registrazione`, utente, {headers: header})
+    return this.http.post<Utente>(`${environment.url}/utente/registrazione`, utente, {headers: header});
   }
 }
