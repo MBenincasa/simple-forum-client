@@ -42,4 +42,8 @@ export class ForumComponent implements OnInit {
     );
   }
 
+  toPost(id: number){
+
+  }
+
 }

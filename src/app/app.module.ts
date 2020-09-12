@@ -10,6 +10,7 @@ import {RegistrationComponent} from './components/utente/registration/registrati
 import {TopBarComponent} from './components/generic/top-bar/top-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ForumComponent } from './components/forum/forum/forum.component';
+import { PostPageComponent } from './components/forum/post-page/post-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ForumComponent } from './components/forum/forum/forum.component';
     LoginComponent,
     RegistrationComponent,
     TopBarComponent,
-    ForumComponent
+    ForumComponent,
+    PostPageComponent
   ],
   imports: [
     BrowserModule,

@@ -15,4 +15,8 @@ export class PostService {
   getPostsByCat(categoria: Categoria){
     return this.http.post(`${environment.url}/post/getByCat`, categoria, {headers: header});
   }
+
+  getPostById(id: number){
+    return this.http.get(`${environment.url}/post/get-${id}`);
+  }
 }
