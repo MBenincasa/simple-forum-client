@@ -4,6 +4,7 @@ import {LoginComponent} from './components/utente/login/login.component';
 import {RegistrationComponent} from './components/utente/registration/registration.component';
 import {ForumComponent} from './components/forum/forum/forum.component';
 import {PostPageComponent} from './components/forum/post-page/post-page.component';
+import {NewPostComponent} from './components/forum/new-post/new-post.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'forum', component: ForumComponent},
   {path: 'login', component: LoginComponent},
   {path: 'registration', component: RegistrationComponent},
-  {path: 'post-details/:id', component: PostPageComponent}
+  {path: 'post-details/:id', component: PostPageComponent},
+  {path: 'new-post/:id', component: NewPostComponent}
 ];
 
 @NgModule({

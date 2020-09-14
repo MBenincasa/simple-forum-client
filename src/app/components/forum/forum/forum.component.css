@@ -1,0 +1,17 @@
+.scroll {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+::ng-deep .card-header {
+  background-color: #343a40;
+  text-align: center;
+}
+
+::ng-deep .btn-link{
+  color: white;
+}
+
+::ng-deep .card-body {
+  background-color: #464e57;
+}

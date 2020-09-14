@@ -2,7 +2,7 @@
   <nav class="navbar navbar-dark bg-dark justify-content-between">
     <a class="navbar-brand" href="#">Simple Forum</a>
     <div *ngIf="!cookieService.get('idUtente')">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" routerLink="/login">Accedi</button>
+      <button class="btn btn-primary my-2 my-sm-0" type="submit" routerLink="/login">Accedi</button>
     </div>
 
     <div *ngIf="cookieService.get('idUtente')">
@@ -18,3 +18,4 @@
     </div>
   </nav>
 </div>
+<div class="mt-3"></div>

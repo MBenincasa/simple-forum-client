@@ -19,4 +19,8 @@ export class UtenteService {
   registration(utente: Utente){
     return this.http.post<Utente>(`${environment.url}/utente/registrazione`, utente, {headers: header});
   }
+
+  getById(id: number){
+    return this.http.get(`${environment.url}/utente/get-${id}`);
+  }
 }

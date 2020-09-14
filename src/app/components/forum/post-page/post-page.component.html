@@ -1,2 +1,10 @@
-<p>{{post?.titolo}}</p>
-<p>{{post?.data}}</p>
+<div class="container-lg">
+  <div class="card bg-dark mb-3 text-white">
+    <div class="card-header"><b>Post pubblicato il: </b>{{post?.data | date:'medium'}}</div>
+    <div class="card-body">
+      <h5 class="card-text font-weight-bold">Testo:</h5>
+      <p class="card-text">{{post?.testo}}</p>
+    </div>
+    <div class="card-footer text-right"><b>Scritto da: </b>{{post?.utente?.nome}} {{post?.utente?.cognome}}</div>
+  </div>
+</div>

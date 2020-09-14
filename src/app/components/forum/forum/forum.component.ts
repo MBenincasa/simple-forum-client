@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CookieService} from 'ngx-cookie-service';
 import {Router} from '@angular/router';
 import {CategoriaService} from '../../../services/categoria.service';
-import {Categoria} from '../../../model/Categoria';
 import {PostService} from '../../../services/post.service';
 
 @Component({
@@ -15,7 +14,8 @@ export class ForumComponent implements OnInit {
   data: any;
   posts: any;
 
-  constructor(private cookieService: CookieService, private router: Router, private categoriaService: CategoriaService, private postService: PostService) { }
+  constructor(private cookieService: CookieService, private router: Router, private categoriaService: CategoriaService, private postService: PostService) {
+  }
 
   ngOnInit(): void {
     if (!this.cookieService.get('idUtente')) {
@@ -23,27 +23,21 @@ export class ForumComponent implements OnInit {
     }
 
     this.getAllCategories();
+    this.getAllPosts();
   }
 
   getAllCategories(){
     this.categoriaService.getAll().subscribe(
       data => {
         this.data = data;
-        for(let cat of this.data){
-          this.getPostsByCat(cat);
-        }
       }
     );
   }
 
-  getPostsByCat(categoria: Categoria){
-    this.postService.getPostsByCat(categoria).subscribe(
+  getAllPosts(){
+    this.postService.getAllPosts().subscribe(
       posts => this.posts = posts
     );
-  }
-
-  toPost(id: number){
-
   }
 
 }

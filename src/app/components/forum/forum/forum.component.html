@@ -8,24 +8,27 @@
     <ngb-accordion #acc="ngbAccordion">
       <ngb-panel id="toggle-1" title="{{cat.titolo}}">
         <ng-template ngbPanelContent>
-          <table class="table table-striped">
-            <thead>
-            <tr>
-              <th scope="col">Utente</th>
-              <th scope="col">Titolo</th>
-              <th scope="col">Data</th>
-              <th scope="col">Post Completo</th>
-            </tr>
-            </thead>
-            <tbody *ngFor="let post of posts">
-            <tr *ngIf="post.categoria.id == cat.id">
-              <td>{{post.utente.nome + ' ' + post.utente.cognome}}</td>
-              <td>{{post.titolo}}</td>
-              <td>{{post.data}}</td>
-              <td><a class="btn btn-outline-primary my-2 my-sm-0" [routerLink]="['/post-details', post.id]">-></a></td>
-            </tr>
-            </tbody>
-          </table>
+          <div class="scroll">
+            <a class="btn btn-primary my-2 my-sm-0 float-right mb-2" [routerLink]="['/new-post', cat.id]">Crea nuovo post in questa categoria</a>
+            <table class="table table-striped overflow-auto bg-light">
+              <thead>
+              <tr>
+                <th scope="col">Utente</th>
+                <th scope="col">Titolo</th>
+                <th scope="col">Data</th>
+                <th scope="col">Post Completo</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let post of posts; index as i">
+              <tr *ngIf="post.categoria.id == cat.id">
+                <td>{{post.utente.nome + ' ' + post.utente.cognome}}</td>
+                <td>{{post.titolo}}</td>
+                <td>{{post.data | date:'medium'}}</td>
+                <td><a class="col btn btn-primary my-2 my-sm-0" [routerLink]="['/post-details', post.id]">-></a></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
         </ng-template>
       </ngb-panel>
     </ngb-accordion>

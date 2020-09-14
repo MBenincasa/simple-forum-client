@@ -5,12 +5,14 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {LoginComponent} from './components/utente/login/login.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RegistrationComponent} from './components/utente/registration/registration.component';
 import {TopBarComponent} from './components/generic/top-bar/top-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ForumComponent } from './components/forum/forum/forum.component';
 import { PostPageComponent } from './components/forum/post-page/post-page.component';
+import { NewPostComponent } from './components/forum/new-post/new-post.component';
+import {DatePipe} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,16 +21,18 @@ import { PostPageComponent } from './components/forum/post-page/post-page.compon
     RegistrationComponent,
     TopBarComponent,
     ForumComponent,
-    PostPageComponent
+    PostPageComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {
