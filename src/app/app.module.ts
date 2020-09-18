@@ -13,6 +13,8 @@ import { ForumComponent } from './components/forum/forum/forum.component';
 import { PostPageComponent } from './components/forum/post-page/post-page.component';
 import { NewPostComponent } from './components/forum/new-post/new-post.component';
 import {DatePipe} from '@angular/common';
+import { NewRispostaComponent } from './components/forum/new-risposta/new-risposta.component';
+import { RispostePageComponent } from './components/forum/risposte-page/risposte-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {DatePipe} from '@angular/common';
     TopBarComponent,
     ForumComponent,
     PostPageComponent,
-    NewPostComponent
+    NewPostComponent,
+    NewRispostaComponent,
+    RispostePageComponent
   ],
   imports: [
     BrowserModule,

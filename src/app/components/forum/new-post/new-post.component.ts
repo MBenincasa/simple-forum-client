@@ -68,7 +68,7 @@ export class NewPostComponent implements OnInit {
     post.testo = this.postForm.value.testo;
     post.data = this.localDate;
 
-    this.postService.insertPost(post).subscribe(
+    this.postService.createPost(post).subscribe(
       data => {
         this.data = data;
         this.router.navigate(['/post-details', this.data?.id]);

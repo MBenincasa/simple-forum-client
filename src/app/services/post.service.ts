@@ -25,7 +25,7 @@ export class PostService {
     return this.http.get(`${environment.url}/post/get-${id}`);
   }
 
-  insertPost(post: Post){
+  createPost(post: Post){
     return this.http.post<Post>(`${environment.url}/post/crea`, post, {headers: header});
   }
 }
