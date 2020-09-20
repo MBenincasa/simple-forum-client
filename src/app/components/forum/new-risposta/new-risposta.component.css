@@ -11,6 +11,24 @@
   color: white;
 }
 
+::ng-deep .btn-link{
+  color: #ADF1D2;
+}
+
+::ng-deep .btn-link:hover{
+  color: #ADF1D2;
+  border-color: #ADF1D2;
+}
+
+::ng-deep .btn-link.focus, ::ng-deep .btn-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(173, 241, 210, 0.5);
+}
+
 ::ng-deep .card-body {
-  background-color: #464e57;
+  background-color: #755B69;
+}
+
+::ng-deep .card-header {
+  background-color: #553555;
+  text-align: center;
 }

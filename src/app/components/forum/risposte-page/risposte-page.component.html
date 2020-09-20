@@ -1,7 +1,7 @@
 <div *ngFor="let commento of data">
-  <div class="card bg-dark mb-1 text-white">
-    <div class="card-header"><b>Commento pubblicato il: </b>{{commento?.data | date:'medium'}}</div>
-    <div class="card-body">
+  <div class="card bg-violet mb-1 text-mint">
+    <div class="card-header bg-violet"><b>Commento pubblicato il: </b>{{commento?.data | date:'medium'}}</div>
+    <div class="card-body bg-violet-second">
       <h5 class="card-text font-weight-bold">Testo:</h5>
       <p class="card-text">{{commento?.testo}}</p>
 

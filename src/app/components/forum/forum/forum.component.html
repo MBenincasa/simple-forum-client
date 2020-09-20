@@ -9,7 +9,7 @@
       <ngb-panel id="toggle-1" title="{{cat.titolo}}">
         <ng-template ngbPanelContent>
           <div class="scroll">
-            <a class="btn btn-primary my-2 my-sm-0 float-right mb-2" [routerLink]="['/new-post', cat.id]">Crea nuovo post in questa categoria</a>
+            <a class="btn btn-green my-2 my-sm-0 float-right mb-2" [routerLink]="['/new-post', cat.id]">Crea nuovo post in questa categoria</a>
             <table class="table table-striped overflow-auto bg-light">
               <thead>
               <tr>
@@ -24,7 +24,7 @@
                 <td>{{post.utente.nome + ' ' + post.utente.cognome}}</td>
                 <td>{{post.titolo}}</td>
                 <td>{{post.data | date:'medium'}}</td>
-                <td><a class="col btn btn-primary my-2 my-sm-0" [routerLink]="['/post-details', post.id]">-></a></td>
+                <td><a class="col btn btn-green my-2 my-sm-0" [routerLink]="['/post-details', post.id]">-></a></td>
               </tr>
               </tbody>
             </table>

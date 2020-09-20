@@ -1,2 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+.text-mint {
+  color: #ADF1D2;
+}
+
+.btn-green {
+  background-color: #ADF1D2;
+  border-color: #ADF1D2;
+  color: #755B69;
+}
+
+.btn-green:hover {
+  background-color: #96C5B0;
+  border-color: #96C5B0;
+  color: #755B69;
+}
+
+.btn-green:focus, .btn-violet.focus {
+  box-shadow: 0 0 0 0.2rem rgba(173, 241, 210, 0.5);
+}
+
+.btn-violet {
+  background-color: #755B69;
+  border-color: #755B69;
+  color: #ADF1D2;
+}
+
+.btn-violet:hover {
+  background-color: #69525e;
+  border-color: #69525e;
+  color: #ADF1D2;
+}
+
+.btn-violet:focus, .btn-violet.focus {
+  box-shadow: 0 0 0 0.2rem rgba(117, 91, 105, 0.5);
+}

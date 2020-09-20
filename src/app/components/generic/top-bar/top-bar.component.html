@@ -1,14 +1,14 @@
 <div>
   <nav class="navbar navbar-dark bg-dark justify-content-between">
-    <a class="navbar-brand" href="#">Simple Forum</a>
+    <a class="navbar-brand text-mint" href="#">Simple Forum</a>
     <div *ngIf="!cookieService.get('idUtente')">
-      <button class="btn btn-primary my-2 my-sm-0" type="submit" routerLink="/login">Accedi</button>
+      <button class="btn btn-violet my-2 my-sm-0" type="submit" routerLink="/login">Accedi</button>
     </div>
 
     <div *ngIf="cookieService.get('idUtente')">
       <div class="col">
         <div ngbDropdown class="d-inline-block">
-          <button class="btn btn-dark" id="dropdownBasic1" ngbDropdownToggle>{{cookieService.get('nomeUtente')}}</button>
+          <button class="btn btn-dark text-mint" id="dropdownBasic1" ngbDropdownToggle>{{cookieService.get('nomeUtente')}}</button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <button ngbDropdownItem>Profilo</button>
             <button ngbDropdownItem (click)="logout()">Logout</button>
