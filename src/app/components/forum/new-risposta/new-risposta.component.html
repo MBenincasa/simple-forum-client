@@ -1,0 +1,19 @@
+<div class="mb-1">
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel id="toggle-1" title="Nuovo Commento">
+      <ng-template ngbPanelContent>
+        <form [formGroup]="rispostaForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="testo" class="text-white">Testo:</label>
+            <textarea formControlName="testo" placeholder="testo" name="testo" class="form-control t-area"
+                      id="testo"></textarea>
+          </div>
+          <div class="row align-items-end row justify-content-around">
+            <button class="btn btn-primary col-4">Crea</button>
+          </div>
+        </form>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>
+

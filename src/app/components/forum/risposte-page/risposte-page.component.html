@@ -1,0 +1,11 @@
+<div *ngFor="let commento of data">
+  <div class="card bg-dark mb-1 text-white">
+    <div class="card-header"><b>Commento pubblicato il: </b>{{commento?.data | date:'medium'}}</div>
+    <div class="card-body">
+      <h5 class="card-text font-weight-bold">Testo:</h5>
+      <p class="card-text">{{commento?.testo}}</p>
+
+    </div>
+    <div class="card-footer text-right"><b>Scritto da: </b>{{commento?.utente?.nome}} {{commento?.utente?.cognome}}</div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.t-area {
+  min-height: 150px;
+  max-height: 250px;
+}
+
+::ng-deep .card-header {
+  background-color: #343a40;
+}
+
+::ng-deep .btn-link{
+  color: white;
+}
+
+::ng-deep .card-body {
+  background-color: #464e57;
+}
