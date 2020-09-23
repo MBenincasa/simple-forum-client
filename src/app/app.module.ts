@@ -15,6 +15,7 @@ import { NewPostComponent } from './components/forum/new-post/new-post.component
 import {DatePipe} from '@angular/common';
 import { NewRispostaComponent } from './components/forum/new-risposta/new-risposta.component';
 import { RispostePageComponent } from './components/forum/risposte-page/risposte-page.component';
+import { ProfileComponent } from './components/utente/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RispostePageComponent } from './components/forum/risposte-page/risposte
     PostPageComponent,
     NewPostComponent,
     NewRispostaComponent,
-    RispostePageComponent
+    RispostePageComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
