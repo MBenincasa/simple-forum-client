@@ -1,0 +1,13 @@
+::ng-deep .page-item.active .page-link{
+  background-color: #755B69;
+  border-color: #755B69;
+  color: #ADF1D2;
+}
+
+::ng-deep .page-item.active .page-link:focus, ::ng-deep .page-item.active .page-link.focus{
+  box-shadow: 0 0 0 0.2rem rgba(117, 91, 105, 0.5);
+}
+
+::ng-deep .page-link {
+  color: #755B69;
+}

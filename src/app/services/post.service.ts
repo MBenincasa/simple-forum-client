@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Categoria} from '../model/Categoria';
 import {environment} from '../../environments/environment';
 import {Post} from '../model/Post';
+import {Utente} from '../model/Utente';
 
 const header: HttpHeaders = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
 
@@ -27,5 +28,9 @@ export class PostService {
 
   createPost(post: Post){
     return this.http.post<Post>(`${environment.url}/post/crea`, post, {headers: header});
+  }
+
+  getPostByUser(utente: Utente){
+    return this.http.post(`${environment.url}/post/getByUser`, utente, {headers: header});
   }
 }

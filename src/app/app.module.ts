@@ -16,6 +16,7 @@ import {DatePipe} from '@angular/common';
 import { NewRispostaComponent } from './components/forum/new-risposta/new-risposta.component';
 import { RispostePageComponent } from './components/forum/risposte-page/risposte-page.component';
 import { ProfileComponent } from './components/utente/profile/profile.component';
+import { ProfileFeedComponent } from './components/utente/profile-feed/profile-feed.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProfileComponent } from './components/utente/profile/profile.component'
     NewPostComponent,
     NewRispostaComponent,
     RispostePageComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProfileFeedComponent
   ],
   imports: [
     BrowserModule,

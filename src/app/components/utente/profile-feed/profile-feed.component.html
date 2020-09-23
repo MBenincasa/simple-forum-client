@@ -1,0 +1,51 @@
+<h5 class="text-center mb-1 mt-3">Post pubblicati</h5>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Data</th>
+    <th scope="col">Categoria</th>
+    <th scope="col">Titolo</th>
+    <th scope="col">Testo</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let post of posts | slice: (pageP-1) * pageSizeP : (pageP-1) * pageSizeP + pageSizeP">
+    <th scope="row">{{ post?.id }}</th>
+    <td>{{post?.data}}</td>
+    <td>{{post?.categoria?.titolo}}</td>
+    <td>{{post?.titolo}}</td>
+    <td>{{post?.testo}}</td>
+  </tr>
+  </tbody>
+</table>
+<ngb-pagination class="float-right"
+  [(page)]="pageP"
+  [pageSize]="pageSizeP"
+  [collectionSize]="sizePosts"></ngb-pagination>
+
+<h5 class="text-center mb-1 mt-3">Commenti pubblicati</h5>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Data</th>
+    <th scope="col">Categoria</th>
+    <th scope="col">Titolo Post</th>
+    <th scope="col">Testo</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let risposta of risposte | slice: (pageC-1) * pageSizeC : (pageC-1) * pageSizeC + pageSizeC">
+    <th scope="row">{{ risposta?.id }}</th>
+    <td>{{risposta?.data}}</td>
+    <td>{{risposta?.post?.categoria?.titolo}}</td>
+    <td>{{risposta?.post?.titolo}}</td>
+    <td>{{risposta?.testo}}</td>
+  </tr>
+  </tbody>
+</table>
+<ngb-pagination class="float-right"
+                [(page)]="pageC"
+                [pageSize]="pageSizeC"
+                [collectionSize]="sizeRisposte"></ngb-pagination>

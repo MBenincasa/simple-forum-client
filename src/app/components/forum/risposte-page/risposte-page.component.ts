@@ -30,7 +30,7 @@ export class RispostePageComponent implements OnInit {
       data => {
         this.post = data;
         console.log(this.post);
-        this.rispostaService.getByPost(this.post).subscribe(
+        this.rispostaService.getRispostaByPost(this.post).subscribe(
           data => {
             this.data = data;
             console.log(this.data);
